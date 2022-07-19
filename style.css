@@ -1,3 +1,42 @@
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator-body {
+    display: flex;
+    height: 350px;
+    width: 250px;
+    flex-direction: column;
+    border-style: solid;
+    align-items: center;
+    padding: 5px;
+}
+
 .display-screen {
     direction: rtl;
+    align-self: stretch;
+    height: 75px;
+}
+
+
+
+.button-row{
+    display: flex;
+    flex: auto;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    padding: 5px;
+    gap: 5px;
+}
+
+.button-row > button {
+    background-color: grey;
+    color: white;
+    flex-grow: 1;
+    justify-items: stretch;
+    align-self: stretch;
+    border-radius: 3px;
 }
