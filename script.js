@@ -1,22 +1,7 @@
 const displayScreen = document.querySelector('.display-screen')
 
-const zeroButton = document.querySelector('#zero');
-const oneButton = document.querySelector('#one');
-const twoButton = document.querySelector('#two');
-const threeButton = document.querySelector('#three');
-const fourButton = document.querySelector('#four');
-const fiveButton = document.querySelector('#five');
-const sixButton = document.querySelector('#six');
-const sevenButton = document.querySelector('#seven');
-const eightButton = document.querySelector('#eight');
-const nineButton = document.querySelector('#nine');
-const equalsButton = document.querySelector('#equals');
-const addButton = document.querySelector('#add');
-const subtractButton = document.querySelector('#subtact');
-const multiplyButton = document.querySelector('#multiply');
-const divideButton = document.querySelector('#divide');
-const clearButton = document.querySelector('#clear');
-const backspaceButton = document.querySelector('#backspace');
+const digits = document.querySelectorAll('.digit');
+const operators = document.querySelectorAll('.operator')
 
 
 let displayValue = "";
@@ -28,6 +13,14 @@ function updateDisplayValue(text){
 
 updateDisplayValue(displayValue);
 
-zeroButton.addEventListener('click', ()=>{
-    updateDisplayValue('0');
-})
+for ( let i = 0; i < digits.length; i++){
+    digits[i].addEventListener('click', (event) => {
+        console.log(digits[i].innerHTML);
+    })
+}
+
+for ( let i = 0; i < operators.length; i++){
+    operators[i].addEventListener('click', (event) => {
+        console.log(operators[i].innerHTML);
+    })
+}
