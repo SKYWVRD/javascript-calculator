@@ -15,6 +15,8 @@ const addButton = document.querySelector('#add');
 const subtractButton = document.querySelector('#subtact');
 const multiplyButton = document.querySelector('#multiply');
 const divideButton = document.querySelector('#divide');
+const clearButton = document.querySelector('#clear');
+const backspaceButton = document.querySelector('#backspace');
 
 
 let displayValue = "";
