@@ -57,6 +57,16 @@ function operate(a, b, operator){
             break;
         case '\u002b':
             total = a+b;
+            break;
+        case '\u00D7':
+            total = a*b;
+            break;
+        case '\u2212':
+            total = a-b;
+            break;
+            
+        case '\u003D':
+            total = total;
 
     }
 
