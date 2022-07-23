@@ -1,3 +1,8 @@
+@font-face {
+    font-family: calculatorFont;
+    src: url(./fonts/digital-7-font/Digital7Mono-B1g5.ttf)
+}
+
 .main-container {
     display: flex;
     align-items: center;
@@ -15,9 +20,12 @@
 }
 
 .display-screen {
+    font-family: "calculatorFont";
     direction: rtl;
     align-self: stretch;
-    height: 75px;
+    height: 65px;
+    line-height: 65px;
+    font-size: x-large;
 }
 
 
