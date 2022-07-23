@@ -15,8 +15,10 @@
     width: 250px;
     flex-direction: column;
     border-style: solid;
+    border-radius: 5px;
     align-items: center;
     padding: 5px;
+    background-color: lightslategray;
 }
 
 .display-screen {
@@ -26,9 +28,10 @@
     height: 65px;
     line-height: 65px;
     font-size: x-large;
+    border-style: inset;
+    border-radius: 5px;
+    border-width: 5px;
 }
-
-
 
 .button-row{
     display: flex;
@@ -46,5 +49,11 @@
     flex-grow: 1;
     justify-items: stretch;
     align-self: stretch;
-    border-radius: 3px;
+    border-radius: 5px;
+}
+
+#clear {
+    background-color: salmon;
+    color: black;
+    font-weight: bold;
 }
