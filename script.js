@@ -53,7 +53,10 @@ function operate(a, b, operator){
 
     switch (operator){
         case '\u00f7':
-            total = a/b;
+            if(!b)
+                total = "The hell you doing man";
+            else
+                total = a/b;
             break;
         case '\u002b':
             total = a+b;
@@ -100,13 +103,15 @@ for ( let i = 0; i < operators.length; i++){
             firstOperand = total;
 
             if(!firstOperand){
-                total = Number(displayScreen.value);
+                firstOperand = displayScreen.value;
             }
             else if ( !secondOperand ){
-                secondOperand = Number(displayScreen.value);
+                secondOperand = displayScreen.value;
             }
 
             if (firstOperand && secondOperand){
+                firstOperand = Number(firstOperand);
+                secondOperand = Number(secondOperand);
                 console.log(firstOperand);
                 console.log(secondOperand);
                 operate(firstOperand, secondOperand, currentOperator);
