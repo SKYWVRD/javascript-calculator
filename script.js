@@ -57,6 +57,7 @@ function operate(a, b, operator){
                 total = "The hell you doing man";
             else
                 total = a/b;
+                total = total.toFixed(12);
             break;
         case '\u002b':
             total = a+b;
