@@ -12,10 +12,14 @@ let secondOperand = null;
 let currentOperator = null;
 let clearForNext = false;
 let pauseCalcs = false;
+let usedDecimal = false;
 let total = null;
 
 function updateDisplayValue(){
     //Function to update the value in the display screen
+    if(displayValue < 0){
+        displayValue = `${Math.abs(total)}-`
+    }
     displayScreen.value = displayValue;
 }
 
@@ -33,6 +37,7 @@ function clearMemory(){
 function clearOperands(){
     firstOperand = null;
     secondOperand = null;
+    usedDecimal = false;
 }
 
 function clearDisplay(){
@@ -77,7 +82,7 @@ function operate(a, b, operator){
 
     clearOperands();
     displayValue = total;
-    updateDisplayValue(displayValue);
+    updateDisplayValue();
     pauseCalcs = true;
 
 }
@@ -86,12 +91,22 @@ updateDisplayValue(displayValue);
 
 for ( let i = 0; i < digits.length; i++){
     digits[i].addEventListener('click', (event) => {
+        screenValue = digits[i].innerHTML;
         pauseCalcs = false;
         if(clearForNext){
             clearDisplay();
             clearForNext = false;
         }
-        insertToDisplay(digits[i].innerHTML);
+        if(screenValue == '.'){
+            if (!usedDecimal)
+                usedDecimal = true;
+                insertToDisplay(screenValue);
+
+        } else {
+            insertToDisplay(screenValue);
+        }
+
+        
         updateDisplayValue();
     })
 }
